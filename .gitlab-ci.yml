@@ -19,7 +19,7 @@ app_build:
     - npm run build  # Build the project
     - echo "Build Completed!"  # Print a completion message
   tags: # Tags specify the GitLab runner where this pipeline will be executed
-    - mygitlabrunner
+    - travellirunner
   only: # Define which branches trigger this pipeline stage
     - dev
 
@@ -45,6 +45,6 @@ app_deploy:
 
       echo "Deployment Completed!"  # Print a completion message
   tags:  # Tags specify the GitLab runner where this pipeline will be executed
-    - mygitlabrunner
+    - travellirunner
   only:  # Define which branches trigger this pipeline stage
     - dev
