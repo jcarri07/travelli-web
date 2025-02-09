@@ -39,7 +39,7 @@ app_deploy:
       zip -r dist.zip dist/
 
       # Transfer the zip file via SCP
-      scp -v -o StrictHostKeyChecking=no -i ec2_key.pem dist.zip $EC2_USERNAME@EC2_HOST:/var/www/html
+      scp -v -o StrictHostKeyChecking=no -i ec2_key.pem dist.zip $EC2_USERNAME@$EC2_HOST:/var/www/html
 
       # SSH into the remote server and unzip the file
       ssh -o StrictHostKeyChecking=no -i ec2_key.pem $EC2_USERNAME@$EC2_HOST "rm -vrf /var/www/html/travelli-web/* && cd /var/www/html/travelli-web && mv /var/www/html/dist.zip . && unzip -o dist.zip && mv dist/* ."
