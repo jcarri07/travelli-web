@@ -1,0 +1,50 @@
+# CI/CD configuration file
+
+# Define stages for the pipeline
+stages:
+  - build
+  - deploy
+
+# Cache configuration to speed up the build process
+cache:
+  key: "$CI_COMMIT_REF_SLUG"
+  paths:
+    - dist/  # Cache the 'build' directory
+
+# Build stage
+app_build:
+  stage: build
+  script:
+    - npm install  # Install project dependencies
+    - npm run build  # Build the project
+    - echo "Build Completed!"  # Print a completion message
+  tags: # Tags specify the GitLab runner where this pipeline will be executed
+    - mygitlabrunner
+  only: # Define which branches trigger this pipeline stage
+    - dev
+
+# Deploy stage
+app_deploy:
+  stage: deploy
+  script:
+    - |
+      # Change the Key Permissions
+      chmod 600 $EC2_KEY
+      
+      # Zip the build directory
+      zip -r dist.zip dist/
+
+      # Transfer the zip file via SCP
+      scp -v -o StrictHostKeyChecking=no -i $EC2_KEY dist.zip $EC2_USERNAME@EC2_HOST:/var/www/html
+
+      # SSH into the remote server and unzip the file
+      ssh -o StrictHostKeyChecking=no -i $EC2_KEY $EC2_USERNAME@$EC2_HOST "rm -vrf /var/www/html/travelli-web/* && cd /var/www/html/travelli-web && mv /var/www/html/dist.zip . && unzip -o dist.zip && mv dist/* ."
+
+      # Remove the zip file after transfer
+      rm dist.zip
+
+      echo "Deployment Completed!"  # Print a completion message
+  tags:  # Tags specify the GitLab runner where this pipeline will be executed
+    - mygitlabrunner
+  only:  # Define which branches trigger this pipeline stage
+    - dev
