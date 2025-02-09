@@ -16,6 +16,7 @@ const NavBar = ({userType, setUserType} : NavBarProps) => {
     const navigate = useNavigate()
 
     console.log(userType);
+    console.log(navigate);
 
     const [open, setOpen] = useState(false)
     // const [scrollY, setScrollY] = useState(0)

@@ -1,14 +1,8 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Text } from "../atoms/Text"
 import { TopDestinationTexts } from "../particles/DataLists"
 import Slider from "react-slick";
 import { Card } from "../molecules/Card";
-import City1 from "../../assets/gallery1.jpeg"
-import City2 from "../../assets/gallery2.jpeg"
-import City3 from "../../assets/gallery3.jpeg"
-import City4 from "../../assets/gallery4.jpeg"
-import City5 from "../../assets/gallery5.jpeg"
-import City6 from "../../assets/gallery6.jpeg"
 import Choroni from "../../assets/Choroni.jpg";
 import PuertoCabello from "../../assets/PuertoCabello.jpg";
 import ColoniaTovar from "../../assets/ColoniaTovar.jpg";
@@ -93,25 +87,6 @@ const TopDestination = () => {
             },
         ],
     };
-
-    const renderCities = useCallback((element: number) => {
-        switch (element) {
-            case 0:
-                return City1;
-            case 1:
-                return City2;
-            case 2:
-                return City3;
-            case 3:
-                return City4;
-            case 4:
-                return City5;
-            case 5:
-                return City6;
-            default:
-                return "";
-        }
-    }, [])
 
     const getPhoto = (item: Destiny) => {
         if (item.address.includes("Choroni")) {

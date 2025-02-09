@@ -4,7 +4,6 @@ import { Text } from '../atoms/Text'
 import { BookingStepsTexts, TRAVELER, TravelStepsTexts } from '../particles/DataLists'
 import { AirplaneTilt, Buildings, CheckCircle, CreditCard, CurrencyDollar, MagnifyingGlass, MapPin, MapTrifold, Notebook, PlusCircle, Receipt, Users } from '@phosphor-icons/react'
 import { Card } from '../molecules/Card'
-import CardImage1 from "../../assets/bookingImage1.jpeg"
 import CardImage2 from "../../assets/bookingImage2.jpeg"
 import PlayaGrande from "../../assets/PlayaGrande.webp";
 

@@ -6,7 +6,6 @@ import { Button } from "../atoms/Button";
 import { CaretDown, CaretUp } from "@phosphor-icons/react";
 import { Card } from "../molecules/Card";
 import CarryImg from "../../assets/Carry.jpeg";
-import ProfileImg2 from "../../assets/profile2.jpeg"
 import ProfileImg3 from "../../assets/profile3.jpeg"
 import ProfileImg4 from "../../assets/profile4.jpeg"
 
