@@ -38,10 +38,9 @@ app_deploy:
     - |
       # Change the Key Permissions
       sudo apt update -y && sudo apt-get install -y zip unzip
-      echo "$EC2_KEY" > ec2_key.pem
+      echo "$PUB_KEY" > ec2_key.pem
 
-      echo "Clave privada: $EC2_KEY"
-      echo "Final de clave privada"
+      echo "Valor de PUB_KEY: ${PUB_KEY:-(no disponible)}"
       
       cat ec2_key.pem
 
