@@ -36,13 +36,16 @@ app_deploy:
   stage: deploy
   script:
     - |
-      # Change the Key Permissions
+      # Install zip for compress build folder
       sudo apt update -y && sudo apt-get install -y zip unzip
-      echo "$PUB_KEY" > ec2_key.pem      
+
+      # Create .pem file from env variable
+      echo "$PUB_KEY" > ec2_key.pem
+
+      # Restrict permissions to .pem file
       chmod 600 ec2_key.pem
       
       # Zip the build directory
-      if [ ! -d dist/ ] || [ -z "$(ls -A dist/)" ]; then echo "Error: dist/ directory is missing or empty"; exit 1; fi
       zip -r dist.zip dist/
 
       # Transfer the zip file via SCP

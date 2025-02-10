@@ -60,7 +60,7 @@ export const heroAgencyTexts = {
 
 
 export const ServiceTexts = {
-    firstText: "CATEGORIA",
+    firstText: "CATEGORÍA",
     secondText: "Ofrecemos los mejores servicios",
     cards: [
         {
@@ -186,7 +186,7 @@ export const TestimonialTexts = {
     secondText: "Lo que las personas dicen de nosotros",
     feedBacks: [
         {
-            text: "Travelli esta transformado la forma en que buscamos un viaje y hacemos reservaciones, ahora podemos hacer esto en una plataforma mas confiable",
+            text: "Travelli esta transformado la forma en que buscamos un viaje y hacemos reservaciones, ahora podemos hacer esto en una plataforma mas segura, comoda y rapido.",
             person: "Jose Carrizales",
             location: "Caracas, Venezuela"
         },
