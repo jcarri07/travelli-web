@@ -17,6 +17,7 @@ app_build:
   script:
     - curl -fsSL https://deb.nodesource.com/setup_22.x | bash -  # Configura el repositorio de Node.js
     - sudo apt-get install -y nodejs  # Instala Node.js y npm
+    - sudo apt-get install -y zip unzip
     - npm install  # Install project dependencies
     - npm run build  # Build the project
     - echo "Build Completed!"  # Print a completion message
@@ -30,6 +31,9 @@ app_deploy:
   stage: deploy
   script:
     - |
+      # Install neccesary tools
+      sudo apt-get update -y && apt-get install -y zip unzip
+      
       # Change the Key Permissions
       echo "$EC2_KEY" > ec2_key.pem
       
