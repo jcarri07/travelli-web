@@ -38,12 +38,7 @@ app_deploy:
     - |
       # Change the Key Permissions
       sudo apt update -y && sudo apt-get install -y zip unzip
-      echo "$PUB_KEY" > ec2_key.pem
-
-      echo "Valor de PUB_KEY: ${PUB_KEY:-(no disponible)}"
-      
-      cat ec2_key.pem
-
+      echo "$PUB_KEY" > ec2_key.pem      
       chmod 600 ec2_key.pem
       
       # Zip the build directory
@@ -57,7 +52,7 @@ app_deploy:
       ssh -o StrictHostKeyChecking=no -i ec2_key.pem ubuntu@ec2-35-173-56-243.compute-1.amazonaws.com "sudo rm -rf /var/www/html/travelli-web/* && cd /var/www/html/travelli-web && sudo mv /tmp/dist.zip . && sudo unzip -o dist.zip && sudo mv dist/* ."
 
       # Remove the zip file after transfer
-      sudo rm tmp/dist.zip
+      sudo rm /tmp/dist.zip
 
       echo "Deployment Completed!"  # Print a completion message
   tags:  # Tags specify the GitLab runner where this pipeline will be executed
