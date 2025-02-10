@@ -15,6 +15,8 @@ stages:
 app_build:
   stage: build
   script:
+    - curl -fsSL https://deb.nodesource.com/setup_22.x | bash -  # Configura el repositorio de Node.js
+    - apt-get install -y nodejs  # Instala Node.js y npm
     - npm install  # Install project dependencies
     - npm run build  # Build the project
     - echo "Build Completed!"  # Print a completion message
