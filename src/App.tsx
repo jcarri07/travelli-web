@@ -33,6 +33,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home userType={userType} setUserType={setUserType} />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        <Route path="/terms-and-conditions.html" element={<TermsAndConditions />} />
         <Route path="/privacy-policies" element={<PrivacyPolicies />} />
         <Route path="/how-to-delete-account" element={<HowToDelete />} />
       </Routes>
