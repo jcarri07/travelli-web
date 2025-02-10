@@ -33,6 +33,7 @@ app_deploy:
   script:
     - |
       # Change the Key Permissions
+      sudo apt update -y && sudo apt-get install -y zip unzip
       echo "$EC2_KEY" > ec2_key.pem
       
       cat ec2_key.pem
@@ -40,6 +41,7 @@ app_deploy:
       chmod 600 ec2_key.pem
       
       # Zip the build directory
+      if [ ! -d dist/ ] || [ -z "$(ls -A dist/)" ]; then echo "Error: dist/ directory is missing or empty"; exit 1; fi
       zip -r dist.zip dist/
 
       # Transfer the zip file via SCP
