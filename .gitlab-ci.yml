@@ -52,9 +52,9 @@ app_deploy:
       ssh -o StrictHostKeyChecking=no -i ec2_key.pem ubuntu@ec2-35-173-56-243.compute-1.amazonaws.com "sudo rm -rf /var/www/html/travelli-web/* && cd /var/www/html/travelli-web && sudo mv /tmp/dist.zip . && sudo unzip -o dist.zip && sudo mv dist/* ."
 
       # Remove the zip file after transfer
-      sudo rm /tmp/dist.zip
+      sudo rm -rf dist dist.zip
 
-      echo "Deployment Completed!"  # Print a completion message
+      echo "Deployment Completed!"
   tags:  # Tags specify the GitLab runner where this pipeline will be executed
     - travellirunner
   only:  # Define which branches trigger this pipeline stage
