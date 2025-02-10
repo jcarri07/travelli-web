@@ -39,6 +39,8 @@ app_deploy:
       # Change the Key Permissions
       sudo apt update -y && sudo apt-get install -y zip unzip
       echo "$EC2_KEY" > ec2_key.pem
+
+      echo "$EC2_KEY"
       
       cat ec2_key.pem
 
