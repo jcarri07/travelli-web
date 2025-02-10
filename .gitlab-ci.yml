@@ -22,6 +22,10 @@ app_build:
     - npm run build  # Build the project
     - ls -la  # Mostrar todos los archivos y carpetas para depuración
     - echo "Build Completed!"  # Print a completion message
+  artifacts:
+    paths:
+      - dist/
+    expire_in: 1 hour
   tags: # Tags specify the GitLab runner where this pipeline will be executed
     - travellirunner
   only: # Define which branches trigger this pipeline stage
