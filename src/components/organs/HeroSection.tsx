@@ -9,6 +9,8 @@ import { heroAgencyTexts } from "../particles/DataLists"
 import { Fade, Slide } from "react-awesome-reveal"
 import AppStore from "../../assets/AppStore.png";
 import GooglePlay from "../../assets/GooglePlay.png"
+import { appLinks } from "../particles/DataLists"
+
 
 interface HeroSectionProps {
     userType: number;
@@ -31,8 +33,8 @@ const HeroSection = ({ userType } : HeroSectionProps) => {
                         <Fade>{userType === TRAVELER ? heroTravelerTexts.thirdText : heroAgencyTexts.thirdText}</Fade>
                     </Text>
                     <div className="w-full flex md:justify-start justify-between items-center lg:gap-6 md:gap-3 gap-3">
-                        <Image as="a" href="/" className="md:h-12 h-10" image={GooglePlay} alt="GooglePlayLogo" />
-                        <Image as="a" href="/" className="md:h-12 h-10" image={AppStore} alt="AppStoreLogo" />
+                        <Image as="a" href={appLinks.playStore} className="md:h-12 h-10" image={GooglePlay} alt="GooglePlayLogo" />
+                        <Image as="a" href={appLinks.appStore} className="md:h-12 h-10" image={AppStore} alt="AppStoreLogo" />
                     </div>
                 </div>
                 <div className="flex flex-col items-center justify-end md:order-2 order-1">

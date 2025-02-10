@@ -236,7 +236,7 @@ export const FooterTexts = {
 }
 
 export const appLinks = {
-    playStore: "",
+    playStore: "https://play.google.com/store/apps/details?id=com.travelli.app",
     appStore: "",
 }
 
