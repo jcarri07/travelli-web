@@ -40,7 +40,8 @@ app_deploy:
       sudo apt update -y && sudo apt-get install -y zip unzip
       echo "$EC2_KEY" > ec2_key.pem
 
-      echo "$EC2_KEY"
+      echo "Clave privada: $EC2_KEY"
+      echo "Final de clave privada"
       
       cat ec2_key.pem
 
