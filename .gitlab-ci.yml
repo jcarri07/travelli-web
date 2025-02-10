@@ -20,6 +20,7 @@ app_build:
     - sudo apt-get install -y zip unzip
     - npm install  # Install project dependencies
     - npm run build  # Build the project
+     - ls -la  # Mostrar todos los archivos y carpetas para depuración
     - echo "Build Completed!"  # Print a completion message
   tags: # Tags specify the GitLab runner where this pipeline will be executed
     - travellirunner
