@@ -32,8 +32,8 @@ app_deploy:
   script:
     - |
       # Install neccesary tools
-      sudo apt-get update -y && apt-get install -y zip unzip
-      
+      sudo apt-get update -y && sudo apt-get install -y zip unzip
+
       # Change the Key Permissions
       echo "$EC2_KEY" > ec2_key.pem
       
