@@ -13,6 +13,7 @@ import { useEffect, useState } from "react";
 import Footer from "./components/organs/Footer";
 import { TRAVELER } from "./components/particles/DataLists";
 import HowToDelete from "./components/pages/HowToDelete";
+import PricingPlans from "./components/pages/Plans";
 
 function App() {
   const directory = useLocation();
@@ -36,6 +37,7 @@ function App() {
         <Route path="/terms-and-conditions.html" element={<TermsAndConditions />} />
         <Route path="/privacy-policies" element={<PrivacyPolicies />} />
         <Route path="/how-to-delete-account" element={<HowToDelete />} />
+        <Route path="/plans" element={<PricingPlans />} />
       </Routes>
       <Footer userType={userType}/>
     </div>
