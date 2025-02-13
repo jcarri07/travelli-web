@@ -1,0 +1,14 @@
+[
+    {
+      "relation": [
+        "delegate_permission/common.handle_all_urls"
+      ],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.travelli.app",
+        "sha256_cert_fingerprints": [
+          "C8:A3:84:A3:AE:8B:F2:AE:99:1E:BC:43:02:E9:0D:D7:C0:50:86:94:01:CF:96:30:F7:6A:BD:64:0E:3F:5A:06"
+        ]
+      }
+    }
+  ]
