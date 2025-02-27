@@ -24,7 +24,7 @@ const TripDeepLinkRedirect = () => {
   return (
     <div className="bg-white text-color3 p-8 rounded-xl max-w-4xl mx-auto mt-24">
       <p>Haz clic en el botón para abrir la appsss:</p>
-      <button onClick={handleRedirect}>Abrir en Travelli {id}</button>
+      <button onClick={handleRedirect}>Abrir en Travelli este id{id}</button>
     </div>
   );
 }
