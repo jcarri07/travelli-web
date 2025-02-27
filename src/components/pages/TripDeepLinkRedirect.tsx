@@ -5,6 +5,7 @@ const TripDeepLinkRedirect = () => {
   const { id } = useParams();
 
   useEffect(() => {
+    alert(`trip id: ${id}`);
     //const deepLink = `travellliapp://trip/${id}`;
     //window.location.href = deepLink;
   }, [id]);

@@ -14,6 +14,7 @@ import Footer from "./components/organs/Footer";
 import { TRAVELER } from "./components/particles/DataLists";
 import HowToDelete from "./components/pages/HowToDelete";
 import PricingPlans from "./components/pages/Plans";
+import TripDeepLinkRedirect from "./components/pages/TripDeepLinkRedirect";
 
 function App() {
   const directory = useLocation();
@@ -36,8 +37,9 @@ function App() {
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/terms-and-conditions.html" element={<TermsAndConditions />} />
         <Route path="/privacy-policies" element={<PrivacyPolicies />} />
-        <Route path="/how-to-delete-account/factos" element={<HowToDelete />} />
+        <Route path="/how-to-delete-account/" element={<HowToDelete />} />
         <Route path="/plans" element={<PricingPlans />} />
+        <Route path="/trip/:id/" element={<TripDeepLinkRedirect />}/>
       </Routes>
       <Footer userType={userType}/>
     </div>
