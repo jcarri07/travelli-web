@@ -9,9 +9,15 @@ const TripDeepLinkRedirect = () => {
     //window.location.href = deepLink;
   }, [id]);
 
+  const handleRedirect = () => {
+    const deepLink = `travelli://trip/${id}`;
+    window.location.href = deepLink;
+};
+
   return (
-    <div>
-      <p>Redirigiendo a Travelli</p>
+    <div className="bg-white text-color3 p-8 rounded-xl max-w-4xl mx-auto mt-24">
+      <p>Haz clic en el botón para abrir la app:</p>
+      <button onClick={handleRedirect}>Abrir en Travelli</button>
     </div>
   );
 }
