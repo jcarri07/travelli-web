@@ -6,6 +6,11 @@ const TripDeepLinkRedirect = () => {
 
   useEffect(() => {
     alert(`trip id: ${id}`);
+    if (id) {
+      alert(`Trip ID: ${id}`);
+    } else {
+      console.error("⚠️ No se recibió el ID");
+    }
     //const deepLink = `travellliapp://trip/${id}`;
     //window.location.href = deepLink;
   }, [id]);
