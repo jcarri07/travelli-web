@@ -51,7 +51,7 @@ const NavBar = ({userType, setUserType} : NavBarProps) => {
                                     userType === TRAVELER ? ' border-white' : ''
                                 } ${navBarColor ? '' : 'text-white'}`}
                             >
-                                Soy Viajero
+                                Soy Viajeros
                             </div>
                             <div
                                 onClick={() => setUserType(TRAVEL_AGENCY)}
@@ -59,7 +59,7 @@ const NavBar = ({userType, setUserType} : NavBarProps) => {
                                     userType === TRAVEL_AGENCY ? ' border-white' : ''
                                 } ${!navBarColor ? 'text-white' : ''}`}
                             >
-                                Soy Agencia
+                                Soy Agencias
                             </div>
                             <List className={`${!navBarColor ? 'text-white' : ''}`}>
                                 <select className="border-none font-light text-base outline-none bg-transparent">
