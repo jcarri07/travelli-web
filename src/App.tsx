@@ -33,13 +33,13 @@ function App() {
         setUserType={setUserType}
       />
       <Routes>
+        <Route path="/trip/:id/" element={<TripDeepLinkRedirect />}/>
         <Route path="/" element={<Home userType={userType} setUserType={setUserType} />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/terms-and-conditions.html" element={<TermsAndConditions />} />
         <Route path="/privacy-policies" element={<PrivacyPolicies />} />
         <Route path="/how-to-delete-account/" element={<HowToDelete />} />
         <Route path="/plans" element={<PricingPlans />} />
-        <Route path="/trip/:id/" element={<TripDeepLinkRedirect />}/>
       </Routes>
       <Footer userType={userType}/>
     </div>
