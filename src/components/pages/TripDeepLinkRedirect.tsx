@@ -11,8 +11,8 @@ const TripDeepLinkRedirect = () => {
 
   const handleRedirect = () => {
     const deepLink = `travelli://trip/${id}`;
-    window.location.href = deepLink;
-};
+    console.log(`Redirigiendo a: ${deepLink}`);
+    window.location.replace(deepLink);};
 
   return (
     <div className="bg-white text-color3 p-8 rounded-xl max-w-4xl mx-auto mt-24">
