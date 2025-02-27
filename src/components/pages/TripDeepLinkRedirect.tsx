@@ -5,26 +5,18 @@ const TripDeepLinkRedirect = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    alert(`trip id: ${id}`);
-    if (id) {
-      alert(`Trip ID: ${id}`);
-    } else {
-      console.error("⚠️ No se recibió el ID");
-    }
-    //const deepLink = `travellliapp://trip/${id}`;
-    //window.location.href = deepLink;
+    const deepLink = `travellliapp://trip/${id}`;
+    window.location.href = deepLink;
   }, [id]);
 
-  const handleRedirect = () => {
-    const deepLink = `travellliapp://trip/${id}`;
-    alert(`Redirigiendo a: ${deepLink}`);
-    window.location.replace(deepLink);
-  };
+  // const handleRedirect = () => {
+  //   const deepLink = `travellliapp://trip/${id}`;
+  //   window.location.replace(deepLink);
+  // };
 
   return (
     <div className="bg-white text-color3 p-8 rounded-xl max-w-4xl mx-auto mt-24">
-      <p>Haz clic en el botón para abrir la appsss:</p>
-      <button onClick={handleRedirect}>Abrir en Travelli este id{id}</button>
+      <p>Redirigiendo a Travelli</p>
     </div>
   );
 }
