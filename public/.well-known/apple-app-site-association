@@ -1,11 +1,22 @@
 {
     "applinks": {
-        "apps": [],
         "details": [
             {
-                "appID": "com.travelli.app",
-                "paths": [ "/trip/*"]
+                "appIDs": ["MYV6MKFDJ5.com.travelli.app"],
+                "components": [
+                    {
+                        "/": "/trip/*",
+                        "comment": "Matches any URL with a path that starts with /trip/."
+                    },
+                    {
+                        "/": "/booking/*",
+                        "comment": "Matches any URL with a path that starts with /booking/."
+                    }
+                ]
             }
         ]
+    },
+    "webcredentials": {
+        "apps": [ "MYV6MKFDJ5.com.travelli.app"]
     }
 }
