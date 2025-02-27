@@ -39,7 +39,7 @@ function App() {
         <Route path="/privacy-policies" element={<PrivacyPolicies />} />
         <Route path="/how-to-delete-account" element={<HowToDelete />} />
         <Route path="/plans" element={<PricingPlans />} />
-        <Route path="/app/:id" element={<TripDeepLinkRedirect />}/>
+        <Route path="/trip/app/:id" element={<TripDeepLinkRedirect />}/>
       </Routes>
       <Footer userType={userType}/>
     </div>
