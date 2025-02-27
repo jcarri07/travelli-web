@@ -10,7 +10,9 @@ const TripDeepLinkRedirect = () => {
   }, [id]);
 
   return (
-    <p>Redirigiendo a Travelli</p>
+    <div>
+      <p>Redirigiendo a Travelli</p>
+    </div>
   );
 }
 
