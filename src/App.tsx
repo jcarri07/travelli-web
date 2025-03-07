@@ -15,6 +15,8 @@ import { TRAVELER } from "./components/particles/DataLists";
 import HowToDelete from "./components/pages/HowToDelete";
 import PricingPlans from "./components/pages/Plans";
 import TripDeepLinkRedirect from "./components/pages/TripDeepLinkRedirect";
+import BookingDeepLinkRedirect from "./components/pages/BookingDeepLinkRedirect";
+import UserDeepLinkRedirect from "./components/pages/UserDeepLinkRedirect";
 
 function App() {
   const directory = useLocation();
@@ -33,6 +35,8 @@ function App() {
         setUserType={setUserType}
       />
       <Routes>
+        <Route path="/booking/:id/" element={<BookingDeepLinkRedirect />}/>
+        <Route path="/user/:id/" element={<UserDeepLinkRedirect />}/>
         <Route path="/trip/:id/" element={<TripDeepLinkRedirect />}/>
         <Route path="/" element={<Home userType={userType} setUserType={setUserType} />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
