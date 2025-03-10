@@ -139,19 +139,19 @@ const TermsAndConditions = () => {
           <li>Intentar descompilar o realizar ingeniería inversa sobre el código de la aplicación.</li>         
         </ul>
       </section>
-      <section>
+      <section className="mb-4">
         <h2 className="text-xl font-semibold mb-2">3. Terminación</h2>
         <p>Travelli puede suspender o rescindir su acceso a la aplicación en caso de violación de este EULA o de los términos y condiciones.</p>
       </section>
-      <section>
+      <section className="mb-4">
         <h2 className="text-xl font-semibold mb-2">4. Limitación de Responsabilidad</h2>
         <p>Travelli no será responsable de daños indirectos, incidentales o consecuenciales derivados del uso de la aplicación.</p>
       </section>
-      <section>
+      <section className="mb-4">
         <h2 className="text-xl font-semibold mb-2">5. Ley Aplicable</h2>
         <p>Este acuerdo se rige por las leyes de Venezuela y cualquier disputa será resuelta en tribunales locales.</p>
       </section>
-      <section>
+      <section className="mb-4">
         <h2 className="text-xl font-semibold mb-2">6. Contacto</h2>
         <p>Si tiene alguna pregunta sobre estos términos o el EULA, puede contactarnos a través de nuestro soporte en la aplicación o en nuestro correo electrónico de atención al cliente.</p>
       </section>
