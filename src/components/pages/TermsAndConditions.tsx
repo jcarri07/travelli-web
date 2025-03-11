@@ -30,7 +30,7 @@ const TermsAndConditions = () => {
 
         <p className="mt-2 font-semibold">3.2. Requisitos para Agencias de Viajes:</p>
         <p>
-          Las agencias deben registrar un nombre de usuario, nombre de la agencia, correo electrónico, contraseña, ubicación, número de teléfono y fotografía.
+          Las agencias deben registrar un nombre de usuario, nombre de la agencia, correo electrónico, contraseña, ubicación, número de teléfono y fotografía. Ademas, el propietario de la agencia de viajes debe ser mayor de edad (a partir 18 años).
         </p>
 
         <p className="mt-2 font-semibold">3.3. Veracidad de la Información:</p>
