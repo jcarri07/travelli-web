@@ -90,7 +90,7 @@ const Footer = ({ userType } : FooterProps) => {
                 </div>
             </section>
             <Text className="text-center bg-color4 text-white text-xs py-6 font-light">
-                Copyright {new Date().getFullYear()}. Travelli.app. Hecho con ❤️ en Venezuela
+                Copyright {new Date().getFullYear()}. Travelli. Hecho con ❤️ en Venezuela
             </Text>
         </footer>
     )

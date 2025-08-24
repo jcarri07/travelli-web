@@ -127,7 +127,7 @@ const TopDestination = () => {
                             <div key={index} className="md:px-6 px-3">
                                 <Card cardClass="overflow-hidden shadow-md rounded-lg cursor-pointer group" imageAlt={item.short_address} imageSrc={getPhoto(item)} imageWrapperClass="w-full h-[250px] overflow-hidden" cover="group-hover:scale-125 transition duration-500 ease" textWrapperClass="flex flex-col gap-4 w-full px-5 py-5">
                                     <div className="flex justify-between items-center">
-                                        <Text as="h4" className="text-base font-medium text-color3">
+                                        <Text as="h4" className="text-base font-medium text-color3 truncate">
                                             {item.address}
                                         </Text>
                                         <div className="flex items-center gap-2">

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = "https://dev.travelli.app/api";
+const baseURL = "https://travelli.artificialic.net/api";
 
 const api = axios.create({
   baseURL: baseURL,
