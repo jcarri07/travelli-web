@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = "https://travelli.artificialic.net/api";
+const baseURL = import.meta.env.BASE_API_URL || "https://dev-api.travelliapp.com";
 
 const api = axios.create({
   baseURL: baseURL,
