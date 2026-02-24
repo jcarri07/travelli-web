@@ -162,7 +162,7 @@ const HeroSection = ({ userType }: HeroSectionProps) => {
                     {/* Floating badge: stars */}
                     <motion.div
                         animate={{ y: [0, -10, 0] }}
-                        transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                        transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" as const, delay: 0.5 }}
                         className="absolute top-8 -left-4 z-20 flex items-center gap-2 glass-card px-3 py-2.5 rounded-2xl"
                         style={{ border: "1px solid rgba(255,149,0,0.25)" }}
                     >
@@ -177,7 +177,7 @@ const HeroSection = ({ userType }: HeroSectionProps) => {
                     {/* Floating badge: location */}
                     <motion.div
                         animate={{ y: [0, 10, 0] }}
-                        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" as const, delay: 1 }}
                         className="absolute bottom-16 -right-2 z-20 flex items-center gap-2 glass-card px-3 py-2.5 rounded-2xl"
                         style={{ border: "1px solid rgba(255,107,0,0.25)" }}
                     >
@@ -193,7 +193,7 @@ const HeroSection = ({ userType }: HeroSectionProps) => {
                     {/* Phone image */}
                     <motion.div
                         animate={{ y: [0, -14, 0] }}
-                        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" as const }}
                         className="relative z-10 phone-glow"
                     >
                         <img
