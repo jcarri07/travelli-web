@@ -17,7 +17,6 @@ import PricingPlans from "./components/pages/Plans";
 import TripDeepLinkRedirect from "./components/pages/TripDeepLinkRedirect";
 import BookingDeepLinkRedirect from "./components/pages/BookingDeepLinkRedirect";
 import UserDeepLinkRedirect from "./components/pages/UserDeepLinkRedirect";
-import ProgressBar from "./components/atoms/ProgressBar";
 
 function App() {
   const directory = useLocation();
@@ -30,8 +29,7 @@ function App() {
   }, [directory.pathname]);
 
   return (
-    <div className="w-full bg-black text-white font-inter">
-      <ProgressBar />
+    <div className="w-full bg-white text-gray-950 font-poppins">
       <NavBar
         userType={userType}
         setUserType={setUserType}

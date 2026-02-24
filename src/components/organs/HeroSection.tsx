@@ -12,12 +12,6 @@ interface HeroSectionProps {
     setUserType: Dispatch<SetStateAction<number>>;
 }
 
-const floatVariants = {
-    animate: {
-        y: [0, -14, 0],
-        transition: { duration: 4, repeat: Infinity, ease: "easeInOut" },
-    },
-};
 
 const HeroSection = ({ userType }: HeroSectionProps) => {
     const headline =
@@ -198,8 +192,8 @@ const HeroSection = ({ userType }: HeroSectionProps) => {
 
                     {/* Phone image */}
                     <motion.div
-                        variants={floatVariants}
-                        animate="animate"
+                        animate={{ y: [0, -14, 0] }}
+                        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                         className="relative z-10 phone-glow"
                     >
                         <img
