@@ -1,33 +1,164 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* @layer components {
-    .pseudoBefore {
-        @apply relative z-10 before: absolute before:-z-10 before:content-[''];
-    }
-} */
+/* ─── Base ─────────────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+}
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Inter', 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ─── Custom Scrollbar ──────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #FF6B00, #FF9500);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #FF7A20, #FFB84D);
+}
+
+/* ─── Glass Card ────────────────────────────────────────── */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ─── Gradient Border ───────────────────────────────────── */
+.gradient-border {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255,107,0,0.6) 0%, rgba(255,149,0,0.3) 50%, rgba(255,107,0,0.1) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.gradient-border:hover::before {
+  opacity: 1;
+}
+
+/* ─── Animated Gradient Mesh ────────────────────────────── */
+.gradient-mesh {
+  background: 
+    radial-gradient(ellipse 60% 50% at 20% 60%, rgba(255, 107, 0, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 80% 20%, rgba(255, 149, 0, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 50% 90%, rgba(255, 107, 0, 0.06) 0%, transparent 60%),
+    #000000;
+  background-size: 200% 200%;
+  animation: mesh-move 14s ease-in-out infinite;
+}
+
+/* ─── Orange Gradient Text ──────────────────────────────── */
+.text-gradient-orange {
+  background: linear-gradient(135deg, #FF6B00 0%, #FF9500 50%, #FFB84D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Orange Gradient Button ────────────────────────────── */
+.btn-orange {
+  background: linear-gradient(135deg, #FF6B00 0%, #FF9500 100%);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.btn-orange::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #FF7A20 0%, #FFB84D 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.btn-orange:hover::after {
+  opacity: 1;
+}
+.btn-orange > * {
+  position: relative;
+  z-index: 1;
+}
+.btn-orange:hover {
+  box-shadow: 0 0 30px rgba(255, 107, 0, 0.4);
+  transform: translateY(-1px);
+}
+
+/* ─── Gradient Glow Orb ─────────────────────────────────── */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+/* ─── Legacy Card Pseudo ────────────────────────────────── */
 .cardPseudo {
-    position: relative;
-    /* z-index: 5; */
+  position: relative;
 }
-
 .cardPseudo::after {
-    content: "";
-    position: absolute;
-    bottom: 1.5rem;
-    left: 1.5rem;
-    width: 80px;
-    height: 80px;
-    border-radius: 1.5rem 0 1rem 0;
-    z-index: -1;
-    transition: 300ms cubic-bezier(1, 0, 0, 1);
+  content: "";
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  width: 80px;
+  height: 80px;
+  border-radius: 1.5rem 0 1rem 0;
+  z-index: -1;
+  transition: 300ms cubic-bezier(1, 0, 0, 1);
+}
+.cardPseudo:hover::after {
+  bottom: -1.5rem;
+  left: -1.5rem;
 }
 
-.cardPseudo:hover::after {
-    bottom: -1.5rem;
-    left: -1.5rem;
+/* ─── Image with Orange Glow ────────────────────────────── */
+.phone-glow {
+  filter: drop-shadow(0 20px 60px rgba(255, 107, 0, 0.25));
+}
+
+/* ─── Destination Card ──────────────────────────────────── */
+.dest-card {
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.dest-card:hover {
+  transform: scale(1.02);
+}
+.dest-card img {
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.dest-card:hover img {
+  transform: scale(1.08);
 }

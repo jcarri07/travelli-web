@@ -8,6 +8,7 @@ type CardProps = {
     textWrapperClass?: string
     cover?: string
     children?: React.ReactNode
+    style?: React.CSSProperties
 }
 
 export const Card = ({ cardClass, imageWrapperClass, imageAlt, imageSrc, textWrapperClass, children, cover, ...rest }: CardProps) => {

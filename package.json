@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "engines": {
-    "node": ">=22.12.0" 
+    "node": ">=22.12.0"
   },
   "scripts": {
     "dev": "vite",
@@ -16,6 +16,8 @@
     "@emotion/react": "^11.14.0",
     "@phosphor-icons/react": "^2.1.7",
     "axios": "^1.7.9",
+    "framer-motion": "^12.34.3",
+    "lucide-react": "^0.575.0",
     "react": "^18.3.1",
     "react-awesome-reveal": "^4.2.14",
     "react-dom": "^18.3.1",

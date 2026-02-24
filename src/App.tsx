@@ -17,6 +17,7 @@ import PricingPlans from "./components/pages/Plans";
 import TripDeepLinkRedirect from "./components/pages/TripDeepLinkRedirect";
 import BookingDeepLinkRedirect from "./components/pages/BookingDeepLinkRedirect";
 import UserDeepLinkRedirect from "./components/pages/UserDeepLinkRedirect";
+import ProgressBar from "./components/atoms/ProgressBar";
 
 function App() {
   const directory = useLocation();
@@ -29,15 +30,16 @@ function App() {
   }, [directory.pathname]);
 
   return (
-    <div className="w-full bg-white text-gray-950 font-poppins">
+    <div className="w-full bg-black text-white font-inter">
+      <ProgressBar />
       <NavBar
         userType={userType}
         setUserType={setUserType}
       />
       <Routes>
-        <Route path="/booking/:id/" element={<BookingDeepLinkRedirect />}/>
-        <Route path="/user/:id/" element={<UserDeepLinkRedirect />}/>
-        <Route path="/trip/:id/" element={<TripDeepLinkRedirect />}/>
+        <Route path="/booking/:id/" element={<BookingDeepLinkRedirect />} />
+        <Route path="/user/:id/" element={<UserDeepLinkRedirect />} />
+        <Route path="/trip/:id/" element={<TripDeepLinkRedirect />} />
         <Route path="/" element={<Home userType={userType} setUserType={setUserType} />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/terms-and-conditions.html" element={<TermsAndConditions />} />
@@ -45,7 +47,7 @@ function App() {
         <Route path="/how-to-delete-account/" element={<HowToDelete />} />
         <Route path="/plans" element={<PricingPlans />} />
       </Routes>
-      <Footer userType={userType}/>
+      <Footer userType={userType} />
     </div>
   )
 }
